@@ -29,3 +29,4 @@ Welcome to the University of Plymouth's Public Documentation on High Performance
    software/index
    containerisation/index
    ai/index
+   virtualisation/index

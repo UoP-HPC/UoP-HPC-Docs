@@ -63,6 +63,10 @@ Now, we simply call QEMU to start the VM:
 
    singularity run -B /users,/scratch /scratch/software/shared_containers/qemu.sif qemu-system-x86_64 -smp cores=4 -m 20G -M q35,smm=on -cpu host,hv_relaxed,hv_frequencies,hv_vpindex,hv_ipi,hv_tlbflush,hv_spinlocks=0x1fff,hv_synic,hv_runtime,hv_time,hv_stimer,hv_vapic -accel kvm -drive media=cdrom,file=$HOME/Downloads/Win11_25H2_EnglishInternational_x64.iso -drive media=cdrom,file=/scratch/software/iso/virtio-win.iso -nic user,model=virtio -vga virtio -drive if=pflash,format=raw,unit=0,file=/usr/share/OVMF/OVMF_CODE_4M.secboot.fd,readonly=on -global driver=cfi.pflash01,property=secure,value=on -chardev socket,id=chrtpm,path=$HOME/swtpm/tpm-sock -tpmdev emulator,id=tpm0,chardev=chrtpm -device tpm-tis,tpmdev=tpm0 -drive if=pflash,format=raw,unit=1,file=$HOME/OVMF_VARS_4M.fd -drive if=virtio,format=qcow2,file=$HOME/windows.qcow2 -boot order=cd,menu=on
 
+.. note::
+
+   For your convenience, the command above is stored on Lovelace in a file called :bash:`/scratch/software/startwindows.sh`. You can call that instead if you prefer.
+
 Note that users are, in general, not expected to understand every aspect of the command above. Some things that are useful to note however are:
 
 * :plaintext:`-smp cores=4 -m 20G` specifies how many cores and how much memory is available to the guest. This can be adjusted depending on what resources you have requested.

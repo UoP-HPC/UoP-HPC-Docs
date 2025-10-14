@@ -15,7 +15,7 @@ We will enable Secure Boot by using firmware that support Secure Boot. We will a
 Desktop Session
 ---------------
 
-As Windows 11 is primarly a GUI (Graphical User Interface) based product, we will start by opening a Desktop Session on JupyterHub. Please see `Using JupyterHub for Jupyter, Rstudio, Ansys Workbench and More on the Lovelace Cluster <https://docs.lovelace.plymouth.ac.uk/private/jupyterhub/>`__ for instructions on how to do this.
+As Windows 11 is primarily a GUI (Graphical User Interface) based product, we will start by opening a Desktop Session on JupyterHub. Please see `Using JupyterHub for Jupyter, Rstudio, Ansys Workbench and More on the Lovelace Cluster <https://docs.lovelace.plymouth.ac.uk/private/jupyterhub/>`__ for instructions on how to do this.
 
 TPM 2.0
 -------

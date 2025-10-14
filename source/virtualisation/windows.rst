@@ -65,7 +65,7 @@ Now, we simply call QEMU to start the VM:
 
 Note that users are, in general, not expected to understand every aspect of the command above. Some things that are useful to note however are:
 
-* :plaintext:`-smp cores=4 -m 20G` specifies how many cores and how much memory is available to the guest. This can be adjusted depending on what resources oyu have requested.
+* :plaintext:`-smp cores=4 -m 20G` specifies how many cores and how much memory is available to the guest. This can be adjusted depending on what resources you have requested.
 * :plaintext:`-accel kvm` specifies that KVM hardware assisted virtualisation should be used
 * :plaintext:`-drive media=cdrom,file=/scratch/software/iso/virtio-win.iso` specifies to make an iso available to the guest. This containes drivers for paravirtualised devices.
 * :plaintext:`-nic user,model=virtio -vga virtio` specifies to present Virtio paravirtualised network and graphics devices to the guest

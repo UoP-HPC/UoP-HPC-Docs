@@ -71,7 +71,7 @@ Note that users are, in general, not expected to understand every aspect of the 
 
 * :plaintext:`-smp cores=4 -m 20G` specifies how many cores and how much memory is available to the guest. This can be adjusted depending on what resources you have requested.
 * :plaintext:`-accel kvm` specifies that KVM hardware assisted virtualisation should be used
-* :plaintext:`-drive media=cdrom,file=/scratch/software/iso/virtio-win.iso` specifies to make an iso available to the guest. This containes drivers for paravirtualised devices.
+* :plaintext:`-drive media=cdrom,file=/scratch/software/iso/virtio-win.iso` specifies to make an iso available to the guest. This contains drivers for paravirtualised devices.
 * :plaintext:`-nic user,model=virtio -vga virtio` specifies to present Virtio paravirtualised network and graphics devices to the guest
 * :plaintext:`-drive if=pflash,format=raw,unit=0,file=/usr/share/OVMF/OVMF_CODE_4M.secboot.fd,readonly=on` makes the guest use Secure Boot capable firmware
 * :plaintext:`-chardev socket,id=chrtpm,path=$HOME/swtpm/tpm-sock -tpmdev emulator,id=tpm0,chardev=chrtpm -device tpm-tis,tpmdev=tpm0` specifies to provide a TPM device using :bash:`swtpm`

@@ -73,7 +73,7 @@ Note that users are, in general, not expected to understand every aspect of the 
 * :plaintext:`-chardev socket,id=chrtpm,path=$HOME/swtpm/tpm-sock -tpmdev emulator,id=tpm0,chardev=chrtpm -device tpm-tis,tpmdev=tpm0` specifies to provide a TPM device using :bash:`swtpm`
 * :plaintext:`-drive if=virtio,format=qcow2,file=$HOME/windows.qcow2` specifies to provide Virtio based paravirtualised storage. This is key to achieving good performance.
 
-The gues interface will then pop up and the Windows installer will ask you to press any key to proceed. Simply click into the viewer, press any key (such as enter). If you want to escape the viewer, you can press Control+Alt+G.
+The guest interface will then pop up and the Windows installer will ask you to press any key to proceed. Simply click into the viewer, press any key (such as enter). If you want to escape the viewer, you can press Control+Alt+G.
 
 Drivers
 -------

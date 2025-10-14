@@ -82,6 +82,6 @@ You can now proceed with the installation as you would normally install a Window
 
 Click load drivers and, in the drop down, select the CD Drive labeled :plaintext:`virtio-win`, then the folder named :plaintext:`viostor`, then the folder named :plaintext:`w11`, then the folder named :plaintext:`amd64` then press OK. You will then see the option to install the 'Red Hat VirtIO SCSI Controller'. Simply select it and press install. Our storage drive will then appear.
 
-Click load drivers once more and this time go to :plaintext:`virtio-win` > :plaintext:`NetKVM` > :plainext:`w11` > :plaintext:`amd64` and install the 'Red Hat VirtIO Ethernet Adapter'.
+Click load drivers once more and this time go to :plaintext:`virtio-win` > :plaintext:`NetKVM` > :plaintext:`w11` > :plaintext:`amd64` and install the 'Red Hat VirtIO Ethernet Adapter'.
 
 Once the two drivers above are installed, simply select 'Disk 0 Unallocated Space' and proceed with Windows installation as normal. No further steps particular to virtualisation are need. Congratulations in installing Windows 11 as a KVM Virtual Machine!

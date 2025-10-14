@@ -10,7 +10,7 @@ Windows 11 introduces requirements that make virtualising it slightly trickier:
 * It requires `Secure Boot <https://support.microsoft.com/en-gb/windows/windows-11-and-secure-boot-a8ff1202-c0d9-42f5-940f-843abef64fad>`_
 * It requires `TPM 2.0 <https://support.microsoft.com/en-gb/windows/enable-tpm-2-0-on-your-pc-1fd5a332-360d-4f46-a1e7-ae6b0c90645c>`_
 
-We will enable Secure Boot by using firmware that support Secure Boot. We will also enable TPM 2.0 by using :bash:`swtpm`, a TPM Emulator. We will also ensure that that the installation makes use of hardware assisted virtualisation and paravirtualisation features.
+We will enable Secure Boot by using firmware that supports Secure Boot. We will also enable TPM 2.0 by using :bash:`swtpm`, a TPM Emulator. We will also ensure that that the installation makes use of hardware assisted virtualisation and paravirtualisation features.
 
 Desktop Session
 ---------------
@@ -61,7 +61,7 @@ Now, we simply call QEMU to start the VM:
 
 .. code-block:: bash
 
-   singularity run -B /users,/scratch /scratch/software/shared_containers/qemu.sif qemu-system-x86_64 -smp cores=4 -m 20G -M q35,smm=on -cpu host,hv_relaxed,hv_frequencies,hv_vpindex,hv_ipi,hv_tlbflush,hv_spinlocks=0x1fff,hv_synic,hv_runtime,hv_time,hv_stimer,hv_vapic -accel kvm -drive media=cdrom,file=$HOME/Downloads/Win11_25H2_EnglishInternational_x64.iso -drive media=cdrom,file=/scratch/software/iso/virtio-win.iso -nic user,model=virtio -vga virtio -drive if=pflash,format=raw,unit=0,file=/usr/share/OVMF/OVMF_CODE_4M.secboot.fd,readonly=on -global driver=cfi.pflash01,property=secure,value=on -chardev socket,id=chrtpm,path=$HOME/swtpm/tpm-sock -tpmdev emulator,id=tpm0,chardev=chrtpm -device tpm-tis,tpmdev=tpm0 -drive if=pflash,format=raw,unit=1,file=$HOME/OVMF_VARS_4M.fd -drive if=virtio,format=qcow2,file=$HOME/windows.qcow2 -boot order=cd,menu=on
+   singularity run -B /users,/scratch /scratch/software/shared_containers/qemu.sif qemu-system-x86_64 -smp cores=4 -m 20G -M q35,smm=on -cpu host,hv_relaxed,hv_frequencies,hv_vpindex,hv_ipi,hv_tlbflush,hv_spinlocks=0x1fff,hv_synic,hv_runtime,hv_time,hv_stimer,hv_vapic -accel kvm -drive media=cdrom,file=$HOME/Downloads/Win11_25H2_EnglishInternational_x64.iso -drive media=cdrom,file=/scratch/software/iso/virtio-win.iso -nic user,model=virtio -vga virtio -drive if=pflash,format=raw,unit=0,file=/usr/share/OVMF/OVMF_CODE_4M.secboot.fd,readonly=on -global driver=cfi.pflash01,property=secure,value=on -chardev socket,id=chrtpm,path=$HOME/swtpm/tpm-sock -tpmdev emulator,id=tpm0,chardev=chrtpm -device tpm-tis,tpmdev=tpm0 -drive if=pflash,format=raw,unit=1,file=$HOME/OVMF_VARS_4M.fd -drive if=virtio,format=qcow2,file=$HOME/windows.qcow2 -boot order=cd,menu=on -device qemu-xhci -device usb-tablet
 
 .. note::
 

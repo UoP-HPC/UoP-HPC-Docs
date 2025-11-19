@@ -31,3 +31,10 @@ exclude_patterns = []
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 html_css_files = ['asciinema-player.css']
+html_context = {
+    "display_github": True, # Integrate GitHub
+    "github_user": "UoP-HPC", # Username
+    "github_repo": "UoP-HPC-Docs", # Repo name
+    "github_version": "main", # Version
+    "conf_py_path": "/source/", # Path in the checkout to the docs root
+}

@@ -154,7 +154,7 @@ submission script :
    #SBATCH -p gpu_h100
    #SBATCH --gpus 1
 
-Each job must request at least one GPU if running on this partition.
+Each job must request at least one GPU if running on this partition. The job will be allocated CPU cores proportionally to the number of GPUs they've requested -- this means 16 CPU cores per GPU. As such, please do not specify :plaintext:`--cpus-per-task` on this partition.
 
 .. _gpu_l40s_job:
 
@@ -171,7 +171,7 @@ submission script :
    #SBATCH -p gpu_l40s
    #SBATCH --gpus 1
 
-Each job must request at least one GPU if running on this partition.
+Each job must request at least one GPU if running on this partition. The job will be allocated CPU cores proportionally to the number of GPUs they've requested -- this means 8 CPU cores per GPU. As such, please do not specify :plaintext:`--cpus-per-task` on this partition.
 
 Sometimes some nodes are "down" and less nodes are available.
 

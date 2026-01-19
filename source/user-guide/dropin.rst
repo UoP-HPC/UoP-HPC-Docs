@@ -7,7 +7,16 @@ The HPC Admin team hosts periodic drop in sessions for general support on using 
 
 Upcoming sessions are on:
 
-* Wednesday 5th February - 10:00 to 12:00 - Rolle 006
+* Thursday 5th February - 10:00 to 12:00 - Rolle 006
+* Monday 23rd February - 10:00 to 12:00 - BGB 405
+* Thursday 12th March - 10:00 to 12:00 - Rolle 006
+* Monday 23rd March - 10:00 to 12:00 - Rolle 301
+* Thursday 24th April - 10:00 to 12:00 - BGB 405
+* Thursday 7th May - 10:00 to 12:00 - BGB 405
+* Monday 18th May - 10:00 to 12:00 - Rolle 102
+* Thursday 4th June - 10:00 to 12:00 - BGB 404
+* Monday 15th June - 10:00 to 12:00 - BGB 404
+* Thursday 2nd July - 10:00 to 12:00 - BGB 404
 
 Additional sessions can be scheduled were necessary. Please contact `hpcsupport@plymouth.ac.uk <mailto:hpcsupport@plymouth.ac.uk>`_ if you would like to request this.
 
